@@ -1,5 +1,4 @@
 # tanks online
-**an online, non-broken version of that flash game**
+**an online, improved version of tanks**
 
-[add stuff (This game will allow online gameplay so that your friend can't sabotage your puchases)]
-stuff
+*the page can be viewed at https://goo.gl/8EU1oY*
