@@ -1,3 +1,3 @@
 **TO DO**
 
-[ ]Create functional test file
+- [ ] Make test page functional
