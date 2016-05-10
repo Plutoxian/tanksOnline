@@ -3,6 +3,7 @@ p{
 	color: red;
 }
 div{
-	height:80px;
-	width:120px;
+	height:100px;
+	width:100px;
+	display: inline-block;
 }
