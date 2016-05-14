@@ -4,8 +4,18 @@ div{
 	width: 100px;
 	display: inline-block;
 }
-p{
+h1{
     font-size:1em;
+    width:100px;
+    position:auto;
+    text-align:center;
+    
     color:darkolivegreen;
     font-family: cursive
+    border:5px solid black;
+}
+img{
+	width:1024px;
+	border:5px solid black;
+	border-radius:5px;
 }
