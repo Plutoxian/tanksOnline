@@ -6,6 +6,16 @@ div{
 }
 p{
     font-size:1em;
+    width:100px;
+    position:auto;
+    text-align:center;
+    
     color:darkolivegreen;
     font-family: cursive
+    border:5px solid black;
+}
+img{
+	size:.5em;
+	border:5px solid black;
+	border-radius:5px;
 }
