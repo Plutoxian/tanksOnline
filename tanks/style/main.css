@@ -4,7 +4,7 @@ div{
 	width: 100px;
 	display: inline-block;
 }
-p{
+h1{
     font-size:1em;
     width:100px;
     position:auto;
@@ -15,7 +15,7 @@ p{
     border:5px solid black;
 }
 img{
-	size:.5em;
+	width:1024px;
 	border:5px solid black;
 	border-radius:5px;
 }
