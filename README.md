@@ -1,4 +1,5 @@
 # tanks online
 **an online, improved version of tanks**
 
-*the page can be viewed at https://goo.gl/8EU1oY*
+*the home page can be viewed [here](https://goo.gl/8EU1oY)*
+*go straight to the game with [this](https://goo.gl/YaDgC8)*
