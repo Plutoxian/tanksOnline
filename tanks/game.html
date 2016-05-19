@@ -5,9 +5,13 @@
         <script type="text/javascript" src="javascript/game.js"></script>
     </head>
     <body onload="startGame()">
-        <br>
-        <button onmousedown="accelerate(-0.2)"         onmouseup="accelerate(0.05)">ACCELERATE</button>
-        <p>Use the ACCELERATE button to stay in the air</p>
-        <p>How long can you stay alive?</p>
+      <div id="upperHalf">
+        <button onButtonDown="moveLeft()">left</button>
+        <button onButtonDown="fire()">fire</button>
+        <button onButtonDown="moveRight()">right</button>
+      </div>
+      <div id="lowerHalf">
+        <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
+      </div>
     </body>
 </html>
