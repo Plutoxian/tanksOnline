@@ -15,7 +15,7 @@ h1{
 }
 img{
     vertical-align: middle;
-    align-items: center
+    align-items: center;
 	background-color:#B77843;
 	width:1024px;
 	border:5px solid black;
@@ -34,6 +34,7 @@ middle{
     width:100%;
     height:1000%;
     float:right;
+    margin-top: 10%;
 }
 footer{
     background-color: darkolivegreen;
