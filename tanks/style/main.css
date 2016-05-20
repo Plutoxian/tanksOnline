@@ -19,3 +19,24 @@ img{
 	border:5px solid black;
 	border-radius:5px;
 }
+header{
+    width:100%;
+    height:10%;
+    background-image: ../Resources/camo.jpg;
+    position: fixed;
+    border-radius: 4px;
+}
+middle{
+    background-color: darkkhaki;
+    width:100%;
+    height:100%;
+    float:right;
+}
+footer{
+    background-color: darkolivegreen;
+    width:100%;
+    height 7%;
+    border-radius: 4px;
+    clear: both;
+    margin-bottom: 5px;
+}
