@@ -1,1 +1,12 @@
-
+#upperHalf {
+  background-color: bcbec0;
+  width: 100%;
+  height: 20%;
+  border: 1px solid black;
+}
+#lowerHalf{
+  width: 100%;
+  height: 80%;
+  border: 1px solid black;
+  border-top: 0;
+}
