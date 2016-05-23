@@ -1,5 +1,5 @@
 function startGame() {
-  topLeft = new component(400, 266, "../Resources/Shrugging-Man.jpg", 0, 0, "image");
+  topLeft = new component(400, 266, "../../Resources/Shrugging-Man.jpg", 0, 0, "image");
     myGameArea.start();
   topLeft.update();
 }
