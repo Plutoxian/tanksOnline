@@ -2,7 +2,7 @@ function startGame() {
   topLeft = new component(400, 266, "../../Resources/Shrugging-Man.jpg", 0, 0, "image");
     myGameArea.start();
   topLeft.update();
-}
+};
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
@@ -18,7 +18,7 @@ var draw;
 
 function onLoad(){
   draw = document.getElementById("myCanvas").getContext("2d");
-}
+};
 
 function component(width, height, color, x, y, type) {
   this.type = type;
@@ -40,6 +40,6 @@ function component(width, height, color, x, y, type) {
     } else {
       ctx.fillStyle = color;
       ctx.fillRect(this.x, this.y, this.width, this.height);
-  }
+    }
   };
-}
+};
