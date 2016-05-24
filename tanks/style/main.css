@@ -98,3 +98,12 @@ footer{
     clear: both;
     margin-bottom: 2%;
 }
+.Credits{
+    font-size: 2em;
+    font-family: Segoe Print, cursive;
+    text-shadow:
+    0px -1px 0 #2a623d,
+    0px -1px 0 #2a623d,
+    0px 1px 0 #2a623d,
+    0px 1px 0 #2a623d;  
+}
