@@ -41,7 +41,7 @@ h1{
     1px 1.5px 0 #000;  
 }
 
-img{
+#tank{
     z-index: 1;
     margin:4.25%;
 	background-color:#1a472a;
@@ -49,6 +49,13 @@ img{
 	border:5px solid black;
 	border-radius:5px;
    
+}
+#wing{
+    z-index: 1;
+    margin:4.25%;
+    width:90%;
+    
+    margin-top: -5%;
 }
 header{
     
@@ -68,9 +75,9 @@ header{
     margin: -1% 0% 0% -1.2%;
 }
 h2{
+    vertical-align: middle;
     z-index: 1;
-    margin: .% 0% 0% 1%;
-    margin-left: 1%;
+    padding-left: 2%;
 }
 middle{
     z-index: 1;
