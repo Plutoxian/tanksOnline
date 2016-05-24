@@ -7,9 +7,10 @@ h1{
     z-index: 1;
     position:auto;
     text-align:center;
-  
+    background-color: #1a472a;
     color:forestgreen;
-   
+    width: 95%;
+    margin-left: 2.1%;
     border:5px solid black;
 }
 #Start{
@@ -43,37 +44,43 @@ h1{
 img{
     z-index: 1;
     margin:4.25%;
-	background-color:#B77843;
+	background-color:#1a472a;
 	width:90%;
 	border:5px solid black;
 	border-radius:5px;
+   
 }
 header{
     
     z-index: 1;
     width:110%;
-    height:5%;
-    background-color: azure;
-    background-image: ../Resources/camo.jpg;
+    height:7%;
+    background-color: #aaaaaa;
+  /* background-image: ../Resources/camo.jpg;*/
     position: fixed;
     border-bottom: 3px solid black;
     text-align: left;
-    
+    text-shadow:
+    0px -1px 0 #2a623d,
+    0px -1px 0 #2a623d,
+    0px 1px 0 #2a623d,
+    0px 1px 0 #2a623d;  
     margin: -1% 0% 0% -1.2%;
 }
 h2{
     z-index: 1;
-    margin: .8% 0% 0% 1%;
-    
+    margin: .% 0% 0% 1%;
+    margin-left: 1%;
 }
 middle{
     z-index: 1;
-    background-color: darkkhaki;
+    background-color:#5d5d5d;
     border-radius: 4px;
     width:95%;
     height:1000%;
     float:right;
     margin: 7% 2.5%;
+    border: 5px solid #000000;
 }
 footer{
     z-index: 1;
