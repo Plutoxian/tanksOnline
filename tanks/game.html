@@ -6,9 +6,9 @@
     </head>
     <body onload="startGame()">
       <div id="upperHalf">
-        <button onButtonDown="moveLeft()">left</button>
-        <button onButtonDown="fire()">fire</button>
-        <button onButtonDown="moveRight()">right</button>
+        <button onButtonDown="moveLeft()" class="moving_button">left</button>
+        <button onButtonDown="fire()" class="moving_button">fire</button>
+        <button onButtonDown="moveRight()" class="moving_button">right</button>
       </div>
       <div id="lowerHalf">
         <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
