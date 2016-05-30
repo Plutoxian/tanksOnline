@@ -2,9 +2,22 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style/terrainSelect.css"/>
-        <script type="text/javascript" src="javascript/terrainSelect.js"></script>
+        <script type="text/javascript" src="../tanks/javascript/terrainSelect.js"></script>
     </head>
-    <body onload="startGame()">
-      <!--<canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>-->
+    <body>
+                  <div class="Terrain_DropDown">
+                <button class="dropbtn">Terrain</button>
+                <div class="dropdown-content">
+            <a id="terr"></a>
+            <a href="#" onclick="terrainselector(0)"> Desert </a>
+            <a href="#" onclick="terrainselector(1)"> Forest </a>
+            <a href="#" onclick="terrainselector(2)"> Mountain </a>
+            <a href="#" onclick="terrainselector(3)"> Island </a>
+            <a href="#" onclick="terrainselector(4)"> Rainbow </a>
+                    
+            
+            
+                </div>
+        </div>        
     </body>
 </html>
