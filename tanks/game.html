@@ -6,9 +6,9 @@
     </head>
     <body onload="onLoad()">
       <div id="upperHalf">
-        <button onmousedown="onMoveLeftDown()" onmouseup="onMoveLeftUp()" class="moving_button">Left</button>
-        <button onclick="onFire()" class="moving_button">Fire</button>
-        <button onmousedown="onMoveRightDown()" onmouseup="onMoveRightUp()" class="moving_button">Right</button>
+        <button onmousedown="onMoveLeftDown()" onmouseup="onMoveLeftUp()" onmouseout="onMoveLeftUp()" class="moving_button">left</button>
+        <button onclick="onFire()" class="moving_button">fire</button>
+        <button onmousedown="onMoveRightDown()" onmouseup="onMoveRightUp()" onmouseout="onMoveLeftUp()" class="moving_button">right</button>
       </div>
       <div id="lowerHalf">
         <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
