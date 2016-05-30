@@ -2,18 +2,19 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style/tanksSelect.css"/>
-        <script type="text/javascript" src="javascript/tanksSelect.js"></script>
+        <script type="text/javascript" src="../tanks/javascript/tanksSelect.js">
+        </script>
     </head>
     <body>
             <div class="PlayerCount_DropDown">
                 <button class="dropbtn">Player Count</button>
                 <div class="dropdown-content">
-            <a href="#" onclick="peopleselector(2)"> 2 Players </a>
-            <a onclick="peopleselector(3)"> 3 Players </a>
-            <a onclick="peopleselector(4)"> 4 Players </a>
-            <a onclick="peopleselector(5)"> 5 Players </a>
-            <a onclick="peopleselector(6)"> 6 Players </a>
-                
+            <a href="#" onclick="javascript:peopleselector(2);"> 2 Players </a>
+            <a href="#" onclick="peopleselector(3)"> 3 Players </a>
+            <a href="#" onclick="peopleselector(4)"> 4 Players </a>
+            <a href="#" onclick="peopleselector(5)"> 5 Players </a>
+            <a href="#" onclick="peopleselector(6)"> 6 Players </a>
+            <a href="#"><button onclick="showalert()">test</button></a>         
             
             
                 </div>
@@ -21,5 +22,6 @@
         <div>
             <img src="../Resources/thank.png">
         </div>
+        
     </body>
 </html>
