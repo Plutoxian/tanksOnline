@@ -8,6 +8,7 @@ var moveLeft;
 var moveRight;
 
 function drawGround() {
+    draw.beginPath();
     var i;
     draw.fillStyle = "#228B22";
     draw.moveTo(0, 150 - ground[0]);
@@ -19,13 +20,21 @@ function drawGround() {
     draw.fill();
 }
 
+function drawTank(tankNum) {
+    draw.beginPath();
+    draw.moveTo(tankArray[tankNum].x, tankArray[tankNum].y + 5);
+    draw.moveTo(tankArray[tankNum].x + 10,  tankArray[tankNum].y + 5);
+    draw.arcTo(tankArray[tankNum].x +  10, tankArray[tankNum].y, tankArray[tankNum].x + 5, tankArray[tankNum].y, 5);
+    draw.arcTo(tankArray[tankNum].x, tankArray[tankNum].y, tankArray[tankNum].x, tankArray[tankNum].y + 5, 5);
+    draw.fill();
+}
+
 function colDet(tankNum) {
     tankArray[tankNum].y = (150 - ground[(((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6]) - ((ground[1 + ((((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6)] - ground[(((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6]) * (((tankArray[tankNum].x) + 5) % 6) / 5) - 5;
     tankArray[tankNum].angle = Math.atan((ground[1 + ((((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6)] - ground[(((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6]) / 6);
 }
 
 function mainLoop() {
-    draw.rotate(0);
     draw.fillStyle = "#C0EDFF";
     draw.fillRect(0, 0, document.getElementById("myCanvas").width, document.getElementById("myCanvas").height);
     
@@ -48,44 +57,44 @@ function mainLoop() {
     }
     
     drawGround();
-    
+
     draw.fillStyle = "#FF0000";
-    draw.fillRect(tankArray[0].x, tankArray[0].y, 10, 5);
+    drawTank(0);
     
     draw.fillStyle = "#007FFF";
-    draw.fillRect(tankArray[1].x, tankArray[1].y, 10, 5);
+    drawTank(1);
     
     draw.fillStyle = "#00FF00";
-    draw.fillRect(tankArray[2].x, tankArray[2].y, 10, 5);
+    drawTank(2);
     
     draw.fillStyle = "#7F00FF";
-    draw.fillRect(tankArray[3].x, tankArray[3].y, 10, 5);
+    drawTank(3);
     
     draw.fillStyle = "#FFFF00";
-    draw.fillRect(tankArray[4].x, tankArray[4].y, 10, 5);
+    drawTank(4);
     
     draw.fillStyle = "#FF7F00";
-    draw.fillRect(tankArray[5].x, tankArray[5].y, 10, 5);
+    drawTank(5);
     
     setTimeout(mainLoop, 30);
 }
 
 function init() {
     //do initiation stuff here
-    tankArray = [{exists: 1, x: 0, y: 50, power: 100, angle: 0},
-                 {exists: 1, x: 50, y: 50, power: 100, angle: 0},
-                 {exists: 1, x: 100, y: 50, power: 100, angle: 0},
-                 {exists: 1, x: 150, y: 50, power: 100, angle: 0},
-                 {exists: 1, x: 200, y: 50, power: 100, angle: 0},
-                 {exists: 1, x: 250, y: 50, power: 100, angle: 0}];
+    tankArray = [{exists: 1, x: 0, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 50, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 100, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 150, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 200, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 250, y: 50, power: 100, angle: 90}];
     
     currentTurn = 0;
     
-    ground = [50,50,50,50,50,50,50,50,50,50,
-              60,60,60,60,60,60,60,60,60,60,
-              50,50,50,50,51,53,56,58,59,58,
+    ground = [50,50,50,50,50,50,50,50,51,53,
+              57,59,60,60,60,60,60,60,59,57,
+              53,51,50,50,51,53,56,58,59,58,
               56,53,51,50,50,50,50,50,50,50,
-              49,47,44,40,35,29,22,14,10,10,10];
+              49,47,44,40,35,29,22,17,14,13,13];
     
     mainLoop();
 }
