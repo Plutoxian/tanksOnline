@@ -133,6 +133,7 @@ h2:link{
     text-decoration: none;
 }
 .foot{
+   margin: 2px 3px;
     style="text-decoration:none" 
     z-index: 2;
     border: 4px solid ##1a472a;

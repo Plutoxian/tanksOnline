@@ -36,7 +36,12 @@
     background-color: #aaaaaa;
 }
 body{
-    display:inline-block;
+    width: 98%;
+    height: 100%;
+    display: inline-block;
+    
+   
+    
 }
 html{
     background-image: url(../../Resources/camo.jpg);
@@ -45,4 +50,14 @@ html{
 #num{
     font-size: 1.1em;
     border: 2px solid #1a472a;
+}
+.Terrain_DropDown{
+    display: inline-block;
+    position: relative;
+}
+.Terrain_DropDown:hover .dropdown-content{
+    display: block;
+}
+.Terrain_DropDown:hover .dropbtn{
+    background-color: #aaaaaa;
 }
