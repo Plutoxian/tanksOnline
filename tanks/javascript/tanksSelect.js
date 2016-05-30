@@ -1,5 +1,9 @@
-function peopleselector( var a ){
-    var people_amount = a;
-    confirm("input is"+ people_amount);
-
+"use strict";
+var peopleselector = function (a) {
+    /*people_amount = a;*/
+    alert(a);
+  
+}
+function showalert(){
+    alert("ALERT");
 }
