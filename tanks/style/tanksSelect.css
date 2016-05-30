@@ -61,3 +61,7 @@ html{
 .Terrain_DropDown:hover .dropbtn{
     background-color: #aaaaaa;
 }
+#terr{
+    font-size: 1.1em;
+      border: 2px solid #1a472a;
+}
