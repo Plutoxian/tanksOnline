@@ -42,3 +42,7 @@ html{
     background-image: url(../../Resources/camo.jpg);
     
 }
+#num{
+    font-size: 1.1em;
+    border: 2px solid #1a472a;
+}

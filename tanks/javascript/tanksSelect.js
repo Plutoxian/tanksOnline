@@ -1,9 +1,12 @@
 "use strict";
-var peopleselector = function (a) {
+var number=2;
+function peopleselector(a) {
     /*people_amount = a;*/
-    alert(a);
-  
+    number = a;
+    show_number();
 }
-function showalert(){
-    alert("ALERT");
+function show_number(){
+  
+var displayEl = document.getElementById("num");
+displayEl.innerHTML = number+" Selected";
 }
