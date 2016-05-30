@@ -1,4 +1,44 @@
-canvas {
-    border: 1px solid #d3d3d3;
-    background-color: #f1f1f1;
+.Terrain_DropDown{
+    display: inline-block;
+    position: relative;
+}
+.dropbtn{
+    background-color: #5a5a5a;
+    padding: 16px;
+    cursor: pointer;
+    border: 5px solid #1a472a;
+    font-family: Rockwell;
+    font-size: 1.2em;
+}
+.dropdown-content{
+    font-family: Rockwell;
+    display: none;
+    position: absolute;
+    background-color: #aaaaaa;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0.2);
+    
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: #5a5a5a;
+    
+}
+.Terrain_DropDown:hover .dropdown-content{
+    display: block;
+}
+.Terrain_DropDown:hover .dropbtn{
+    background-color: #aaaaaa;
+}
+body{
+    display:inline-block;
+}
+html{
+    background-image: url(../../Resources/camo.jpg);
+    
 }
