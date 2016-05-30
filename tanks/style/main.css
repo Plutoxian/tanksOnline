@@ -131,3 +131,8 @@ h2:visited{
 h2:link{
     text-decoration: none;
 }
+.foot{
+    style="text-decoration:none" 
+    z-index: 2;
+    border: 4px solid ##1a472a;
+}
