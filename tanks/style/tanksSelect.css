@@ -38,3 +38,7 @@
 body{
     display:inline-block;
 }
+html{
+    background-image: url(../../Resources/camo.jpg);
+    
+}
