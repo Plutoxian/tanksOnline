@@ -62,13 +62,15 @@ h1{
 header{
     border-radius: 4px;
     z-index: 1;
-    width:100%;
+    width:99%;
     height:6.5%;
     min-height: 40px;
     background-color: #aaaaaa;
     position: fixed;
     border-bottom: 3px solid black;
-    border-left: 4px solid #5a5a5a;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    border-top: 3px solid black;
     text-align: left;
     text-shadow:
     0px -1px 0 #2a623d,
