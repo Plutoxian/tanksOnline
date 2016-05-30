@@ -125,3 +125,9 @@ footer{
 .home_button:visited{
     text-decoration: none;
 }
+h2:visited{
+    text-decoration: none;
+}
+h2:link{
+    text-decoration: none;
+}
