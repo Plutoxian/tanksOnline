@@ -17,6 +17,10 @@ html{
     background-color: #aaaaaa;
 
 }
+#myCanvas{
+    width: 480px;
+    height: 640px;
+}
 .moving_button{
     border: 2px solid #aaaaaa;
     font-family: BankGothic Md BT Medium;
