@@ -4,11 +4,11 @@
         <link rel="stylesheet" type="text/css" href="style/game.css"/>
         <script type="text/javascript" src="javascript/game.js"></script>
     </head>
-    <body onload="startGame()">
+    <body onload="onLoad()">
       <div id="upperHalf">
-        <button onButtonDown="moveLeft()" class="moving_button">left</button>
-        <button onButtonDown="fire()" class="moving_button">fire</button>
-        <button onButtonDown="moveRight()" class="moving_button">right</button>
+        <button onmousedown="onMoveLeftDown()" onmouseup="onMoveLeftUp()" onmouseout="onMoveLeftUp()" class="moving_button">left</button>
+        <button onclick="onFire()" class="moving_button">fire</button>
+        <button onmousedown="onMoveRightDown()" onmouseup="onMoveRightUp()" onmouseout="onMoveLeftUp()" class="moving_button">right</button>
       </div>
       <div id="lowerHalf">
         <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
