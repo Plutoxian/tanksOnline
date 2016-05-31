@@ -13,13 +13,15 @@ html{
     width: 100%;
     height: 80%;
     border: 3px solid black;
-  
+    
+    padding-left: 16.5%;
     background-color: #aaaaaa;
 
 }
 #myCanvas{
-    width: 480px;
-    height: 640px;
+    border: 4px solid black; 
+    width: 1280px;
+    height: 720px;
 }
 .moving_button{
     border: 2px solid #aaaaaa;
