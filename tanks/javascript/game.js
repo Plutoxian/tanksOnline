@@ -11,12 +11,12 @@ function drawGround() {
     draw.beginPath();
     var i;
     draw.fillStyle = "#228B22";
-    draw.moveTo(0, 150 - ground[0]);
+    draw.moveTo(0, 480 - ground[0]);
     for (i = 1; i < 51; i += 1) {
-        draw.lineTo(i * 6, 150 - ground[i]);
+        draw.lineTo(i * 10, 480 - ground[i]);
     }
-    draw.lineTo(300, 150);
-    draw.lineTo(0, 150);
+    draw.lineTo(640, 480);
+    draw.lineTo(0, 480);
     draw.fill();
 }
 
