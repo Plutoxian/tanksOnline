@@ -12,25 +12,24 @@ function drawGround() {
     var i;
     draw.fillStyle = "#228B22";
     draw.moveTo(0, 480 - ground[0]);
-    for (i = 1; i < 51; i += 1) {
-        draw.lineTo(i * 10, 480 - ground[i]);
+    for (i = 0; i < 200; i += 1) {
+        draw.lineTo(i * 10, 720 - ground[i]);
     }
-    draw.lineTo(640, 480);
-    draw.lineTo(0, 480);
+    draw.lineTo(1280, 720);
+    draw.lineTo(0, 720);
     draw.fill();
 }
 
 function drawTank(tankNum) {
     draw.beginPath();
-    draw.moveTo(tankArray[tankNum].x, tankArray[tankNum].y + 5);
-    draw.moveTo(tankArray[tankNum].x + 10,  tankArray[tankNum].y + 5);
-    draw.arcTo(tankArray[tankNum].x +  10, tankArray[tankNum].y, tankArray[tankNum].x + 5, tankArray[tankNum].y, 5);
-    draw.arcTo(tankArray[tankNum].x, tankArray[tankNum].y, tankArray[tankNum].x, tankArray[tankNum].y + 5, 5);
+    draw.moveTo(tankArray[tankNum].x + 30,  tankArray[tankNum].y + 15);
+    draw.arcTo(tankArray[tankNum].x +  30, tankArray[tankNum].y, tankArray[tankNum].x + 15, tankArray[tankNum].y, 15);
+    draw.arcTo(tankArray[tankNum].x, tankArray[tankNum].y, tankArray[tankNum].x, tankArray[tankNum].y + 15, 15);
     draw.fill();
 }
 
 function colDet(tankNum) {
-    tankArray[tankNum].y = (150 - ground[(((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6]) - ((ground[1 + ((((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6)] - ground[(((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6]) * (((tankArray[tankNum].x) + 5) % 6) / 5) - 5;
+    tankArray[tankNum].y = (720 - ground[(((tankArray[tankNum].x) + 15) - (((tankArray[tankNum].x) + 15) % 10)) / 10]) - ((ground[1 + ((((tankArray[tankNum].x) + 15) - (((tankArray[tankNum].x) + 15) % 10)) / 10)] - ground[(((tankArray[tankNum].x) + 15) - (((tankArray[tankNum].x) + 15) % 10)) / 10]) * (((tankArray[tankNum].x) + 15) % 10) / 10) - 15;
     tankArray[tankNum].angle = Math.atan((ground[1 + ((((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6)] - ground[(((tankArray[tankNum].x) + 5) - (((tankArray[tankNum].x) + 5) % 6)) / 6]) / 6);
 }
 
@@ -55,8 +54,6 @@ function mainLoop() {
     for (i = 0; i < 6; i += 1) {
         colDet(i);
     }
-    
-    drawGround();
 
     draw.fillStyle = "#FF0000";
     drawTank(0);
@@ -76,31 +73,48 @@ function mainLoop() {
     draw.fillStyle = "#FF7F00";
     drawTank(5);
     
+    drawGround();
+    
     setTimeout(mainLoop, 30);
 }
 
 function init() {
     //do initiation stuff here
     tankArray = [{exists: 1, x: 0, y: 50, power: 100, angle: 90},
-                 {exists: 1, x: 50, y: 50, power: 100, angle: 90},
-                 {exists: 1, x: 100, y: 50, power: 100, angle: 90},
-                 {exists: 1, x: 150, y: 50, power: 100, angle: 90},
                  {exists: 1, x: 200, y: 50, power: 100, angle: 90},
-                 {exists: 1, x: 250, y: 50, power: 100, angle: 90}];
+                 {exists: 1, x: 400, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 600, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 800, y: 50, power: 100, angle: 90},
+                 {exists: 1, x: 1000, y: 50, power: 100, angle: 90}];
     
     currentTurn = 0;
     
-    ground = [50,50,50,50,50,50,50,50,51,53,
-              57,59,60,60,60,60,60,60,59,57,
-              53,51,50,50,51,53,56,58,59,58,
-              56,53,51,50,50,50,50,50,50,50,
-              49,47,44,40,35,29,22,17,14,13,13];
+    ground = [250,250,250,250,250,250,250,250,250,251,
+              253,256,260,263,265,266,266,266,266,266,
+              265,263,260,256,253,251,250,250,250,250,
+              250,250,249,247,244,240,235,229,224,220,
+              217,215,214,214,214,214,214,214,214,217,
+              220,224,229,235,240,244,247,249,250,250,
+              250,250,250,250,250,250,250,250,250,251,
+              253,256,260,263,265,266,266,266,266,266,
+              265,263,260,256,253,251,250,250,250,250,
+              250,250,249,247,244,240,235,229,224,220,
+              217,215,214,214,214,214,214,214,214,217,
+              220,224,229,235,240,244,247,249,250,250,
+              250,250,250,250,250,250,250,250,250,251,
+              253,256,260,263,265,266,266,266,266,266,
+              265,263,260,256,253,251,250,250,250,250,
+              250,250,249,247,244,240,235,229,224,220,
+              217,215,214,214,214,214,214,214,214,217,
+              220,224,229,235,240,244,247,249,250,250];
     
     mainLoop();
 }
 
 function onLoad() {
     draw = document.getElementById("myCanvas").getContext("2d");
+    document.getElementById("myCanvas").width = 1280;
+    document.getElementById("myCanvas").height = 720;
     init();
 }
 
